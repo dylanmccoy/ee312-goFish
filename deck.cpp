@@ -9,6 +9,12 @@ Deck::Deck() {
 }           
 
 void Deck::shuffle() {
+    for (int i=0; i<SIZE; i++) {
+        int r = rand() % SIZE;
+        Card temp = this->myCards[i];
+        this->myCards[i] = this->myCards[r];
+        this->myCards[r] = temp;
+    }
 }
 
 // dealCard
