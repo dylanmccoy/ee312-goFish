@@ -10,7 +10,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+#include <fstream>
 
 #include "card.h"
 using namespace std;
@@ -26,7 +26,8 @@ class Player
     }
 
     string getName() const {
-       return myName;
+        return myName;
+
     }
     
     void addCard(Card c);  //adds a card to the hand
@@ -60,12 +61,12 @@ class Player
     int getHandSize() const; 
     int getBookSize() const; 
        
-    //OPTIONAL
-    // comment out if you decide to not use it
-    //this function will check a players hand for a pair. 
-    //If a pair is found, it returns true and populates the two variables with the cards tha make the pair.
-
-    bool checkHandForPair(Card &c1, Card &c2);
+//    //OPTIONAL
+//    // comment out if you decide to not use it
+//    //this function will check a players hand for a pair.
+//    //If a pair is found, it returns true and populates the two variables with the cards tha make the pair.
+//
+//    bool checkHandForPair(Card &c1, Card &c2);
 
     //OPTIONAL
     // comment out if you decide to not use it    

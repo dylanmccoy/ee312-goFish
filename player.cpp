@@ -1,14 +1,13 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
 #include "card.h"
 #include "player.h"
 
 using namespace std;
 
 Player::Player() {
-
+    cout << "invalid player" << endl;
 }
 
 void Player::addCard(Card c) {
@@ -25,7 +24,7 @@ void Player::bookCards(Card c1, Card c2) {
 //If a pair is found, it returns true and populates the two variables with the cards tha make the pair.
 
 bool Player::checkHandForBook(Card &c1, Card &c2) {
-
+    return true;
 }
 
 //OPTIONAL
@@ -52,11 +51,11 @@ Card Player::removeCardFromHand(Card c) {
 }
 
 string Player::showHand() const {
-
+    return "this is my hand";
 } 
 
 string Player::showBooks() const {
-
+    return "these are my books";
 }
 
 
@@ -66,9 +65,9 @@ string Player::showBooks() const {
 //this function will check a players hand for a pair. 
 //If a pair is found, it returns true and populates the two variables with the cards tha make the pair.
 
-bool Player::checkHandForPair(Card &c1, Card &c2) {
-
-}
+//bool Player::checkHandForPair(Card &c1, Card &c2) {
+//
+//}
 
 //OPTIONAL
 // comment out if you decide to not use it    
@@ -78,3 +77,13 @@ bool Player::checkHandForPair(Card &c1, Card &c2) {
 bool Player::sameRankInHand(Card c) const {
     
 }
+
+
+int Player::getHandSize() const{
+
+}
+
+int Player::getBookSize() const{
+
+}
+
