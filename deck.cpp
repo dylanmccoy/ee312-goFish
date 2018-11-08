@@ -1,19 +1,31 @@
 #include "card.h"
 #include "deck.h"
-#include <cstdlib>
 
 using namespace std;
 
 Deck::Deck() {
-
+    myIndex = 0;
+    Card temp;
+    for (int i = 0; i < 13; i++) {
+        myCards[i] = Card(i+1, Card::spades);
+    }
+    for (int i = 13; i < 26; i++) {
+        myCards[i] = Card(i-12, Card::hearts);
+    }
+    for (int i = 26; i < 39; i++) {
+        myCards[i] = Card(i-25, Card::diamonds);
+    }
+    for (int i = 39; i < 52; i++) {
+        myCards[i] = Card(i-38, Card::clubs);
+    }
 }           
 
 void Deck::shuffle() {
-    for (int i=0; i<SIZE; i++) {
-        int r = rand() % SIZE;
-        Card temp = this->myCards[i];
-        this->myCards[i] = this->myCards[r];
-        this->myCards[r] = temp;
+    for (int i=0; i<52; i++) {
+        int r = rand() % 52;
+        Card temp = myCards[i];
+        myCards[i] = myCards[r];
+        myCards[r] = temp;
     }
 }
 
