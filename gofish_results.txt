@@ -152,8 +152,27 @@ testing one player functions
 ________________________________________
 [As]
 []
-testing checkHandForBook
-card1 is:As
-card2 is:As
 []
-{[As, As]}
+{[As, Ah]}
+testing two players asking for cards -- swap success
+________________________________________
+size of deck is: 52
+p2 hand is: [As, 2s, 3s, 4s, 5s, 6s, 7s]
+p2 book is: {}
+p3 hand is: [8s, 9s, 10s, Js, Qs, Ks, Ah]
+p3 book is: {}
+testing chooseCardFromHand()
+________________________________________
+card: 0 for p2 chose is:2s
+card: 1 for p2 chose is:6s
+card: 2 for p2 chose is:As
+card: 0 for p3 chose is:Ah
+card: 1 for p3 chose is:Js
+card: 2 for p3 chose is:8s
+10 of spades not in p2 hand
+p3 asks p2 for Ace of spades
+p2 hand:[As, 2s, 3s, 4s, 5s, 6s, 7s]
+p3 hand:[8s, 9s, 10s, Js, Qs, Ks, Ah]
+Ace of spades in p2 hand
+p3 should have a book now:
+{[Ah, As]}

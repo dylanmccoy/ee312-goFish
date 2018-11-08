@@ -35,7 +35,7 @@ void Player::bookCards(Card c1, Card c2) {
 
 bool Player::checkHandForBook(Card &c1, Card &c2) {
     for (auto it1 = myHand.begin(); it1 != myHand.end(); it1++) {
-        for (auto it2 = myHand.begin() + 1; it2 != myHand.end(); it2++) {
+        for (auto it2 = it1 + 1; it2 != myHand.end(); it2++) {
             if (it1->getRank() == it2->getRank()) {
                 c1 = *it1;
                 c2 = *it2;
@@ -56,12 +56,21 @@ bool Player::rankInHand(Card c) const {
 //uses some strategy to choose one card from the player's
 //hand so they can say "Do you have a 4?"
 Card Player::chooseCardFromHand() const {
-    
+    int r = rand() % myHand.size();
+    auto iter = myHand.begin() + r;
+    return *iter;
 } 
 
 //Does the player have the card c in her hand?
 bool Player::cardInHand(Card c) const {
-
+    for (auto iter = myHand.begin(); iter != myHand.end(); iter++) {
+        if (*iter == c) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
 
 //Remove the card c from the hand and return it to the caller
@@ -69,6 +78,7 @@ Card Player::removeCardFromHand(Card c) {
     Card card;
     for (auto iter = myHand.begin(); iter != myHand.end(); iter++) {
         if (*iter == c) {
+            card = c;
             myHand.erase(iter);
             break;
         }

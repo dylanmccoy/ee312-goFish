@@ -143,52 +143,60 @@ int main( )
     myfile << p1.showBooks() << endl;
 
 
-    // myfile << "testing two players asking for cards -- swap success" << endl;
-    // myfile << "________________________________________" << endl;
+    myfile << "testing two players asking for cards -- swap success" << endl;
+    myfile << "________________________________________" << endl;
 
 
-    // Player p2("Dylan");
-    // Player p3("Geof");
+    Player p2("Dylan");
+    Player p3("Geof");
 
-    // Deck deck2;
+    Deck deck2;
 
-    // for(int i = 0; i < 7; i++){
-    //     p2.addCard(deck2.dealCard());
-    // }
+    myfile << "size of deck is: " << deck2.size() << endl;
 
-    // for(int i = 0; i < 7; i++){
-    //     p3.addCard(deck2.dealCard());
-    // }
+    for(int i = 0; i < 7; i++){
+        p2.addCard(deck2.dealCard());
+    }
 
-    // myfile << "testing chooseCardFromHand()" << endl;
-    // myfile << "________________________________________" << endl;
+    for(int i = 0; i < 7; i++){
+        p3.addCard(deck2.dealCard());
+    }
+    myfile << "p2 hand is: " << p2.showHand() << endl;
+    myfile << "p2 book is: " << p2.showBooks() << endl;
+    myfile << "p3 hand is: " << p3.showHand() << endl;
+    myfile << "p3 book is: " << p3.showBooks() << endl;
+    myfile << "testing chooseCardFromHand()" << endl;
+    myfile << "________________________________________" << endl;
 
-    // for(int i = 0; i < 3; i++){
-    //     *temp = p2.chooseCardFromHand();
-    //     myfile << "card chosen is:"<< temp->toString() << endl;
-    // }
+    for(int i = 0; i < 3; i++){
+        *temp = p2.chooseCardFromHand();
+        myfile << "card: " << i <<" for p2 chose is:"<< temp->toString() << endl;
+    }
 
-    // for(int i = 0; i < 3; i++){
-    //     *temp = p3.chooseCardFromHand();
-    //     myfile << "card chosen is:"<< temp->toString() << endl;
-    // }
+    for(int i = 0; i < 3; i++){
+        *temp = p3.chooseCardFromHand();
+        myfile << "card: " << i << " for p3 chose is:"<< temp->toString() << endl;
+    }
 
-    // if (p2.cardInHand(Card(10, Card::spades))) {
-    //     myfile << "error: cardInHand" << endl;
-    // }
-    // else {
-    //     myfile << "10 of spades not in p2 hand" << endl;
-    // }
+    if (p2.cardInHand(Card(10, Card::spades))) {
+        myfile << "error: cardInHand" << endl;
+    }
+    else {
+        myfile << "10 of spades not in p2 hand" << endl;
+    }
 
-    // if (p2.cardInHand(Card(1, Card::spades))) {
-    //     myfile << "Ace of spades in p2 hand" << endl;
-    //     p3.addCard(p2.removeCardFromHand(Card(1, Card::spades)));
-    //     myfile << p2.showHand() << endl;
-    //     myfile << p3.showHand() << endl;
-    // }
-    // else {
-    //     myfile << "error: cardInHand" << endl;
-    // }
+    myfile << "p3 asks p2 for Ace of spades" << endl;
+    if (p2.cardInHand(Card(1, Card::spades))) {
+        myfile << "p2 hand:" << p2.showHand() << endl;
+        myfile << "p3 hand:" << p3.showHand() << endl;
+        myfile << "Ace of spades in p2 hand" << endl;
+        p3.addCard(p2.removeCardFromHand(Card(1, Card::spades)));
+        myfile << "p3 should have a book now:" << endl;
+        myfile << p3.showBooks() << endl;
+    }
+    else {
+        myfile << "error: cardInHand" << endl;
+    }
 
     // myfile << "p2 hand size is:" << p2.getHandSize() << endl;
     // myfile << "p2 book size is:" << p2.getBookSize() << endl;
