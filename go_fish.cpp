@@ -110,31 +110,37 @@ int main( )
     }
 
     
-    // // myfile << "testing one player functions" << endl;
-    // // myfile << "________________________________________" << endl;
+    myfile << "testing one player functions" << endl;
+    myfile << "________________________________________" << endl;
 
 
-    // // Player p1("Joe");
+    Player p1("Joe");
 
 
-    // // Deck deck;
+    Deck deck;
 
 
-    // p1.addCard(deck.dealCard());
+    p1.addCard(deck.dealCard());
 
-    // myfile << p1.showHand() << endl;
+    myfile << p1.showHand() << endl;
 
-    // p1.addCard(Card(1, Card::spades));
+    p1.addCard(Card(1, Card::hearts));
 
+    myfile << p1.showHand() << endl;
+
+    // myfile << "testing checkHandForBook" << endl;
     // Card* card1 = new Card;
     // Card* card2 = new Card;
 
     // if(p1.checkHandForBook(*card1, *card2)){
+    //     myfile << "found match" << endl;
     //     p1.bookCards(*card1, *card2);
     // }
 
-    // myfile << p1.showHand() << endl;
-    // myfile << p1.showBooks() << endl;
+    // myfile << "card1 is:" << card1->toString() << endl;
+    // myfile << "card2 is:" << card2->toString() << endl;
+    myfile << p1.showHand() << endl;
+    myfile << p1.showBooks() << endl;
 
 
     // myfile << "testing two players asking for cards -- swap success" << endl;

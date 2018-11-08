@@ -148,3 +148,12 @@ Qh
 7d
 5c
 Jh
+testing one player functions
+________________________________________
+[As]
+[]
+testing checkHandForBook
+card1 is:As
+card2 is:As
+[]
+{[As, As]}
