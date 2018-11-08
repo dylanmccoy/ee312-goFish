@@ -31,7 +31,7 @@ class Deck
     void shuffle();   // shuffle the deck, all 52 cards present
     Card dealCard();   // get a card, after 52 are dealt, fail 
 
-    int  size() const; // # cards left in the deck
+    int  size() const {return SIZE - myIndex;} // # cards left in the deck
 
   private:
 
