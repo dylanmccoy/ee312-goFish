@@ -1,5 +1,6 @@
 #include "card.h"
 #include "deck.h"
+#include <cstdlib>
 
 using namespace std;
 
