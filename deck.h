@@ -25,13 +25,22 @@ class Deck
   
   public:
     
-    
+    //pre:
     Deck();           // pristine, sorted deck
+    //post: 52 card deck in order of A to K, Spades, Hearts, Diamonds, Clubs
 
+    //pre: valid deck
     void shuffle();   // shuffle the deck, all 52 cards present
-    Card dealCard();   // get a card, after 52 are dealt, fail 
+    //post: randomly shuffles cards in deck
 
+    //pre: valid deck
+    Card dealCard();   // get a card, after 52 are dealt, fail
+    //post: returns card at the very top of the deck
+
+    //pre: valid deck
     int  size() const {return SIZE - myIndex;} // # cards left in the deck
+    //post: returns size of deck
+
 
   private:
 
