@@ -26,10 +26,23 @@ using namespace std;
 //#define GAME_DEBUGGING
 
 // PROTOTYPES for functions used by this demonstration program:
+
+
+//input params: either name of the player that won or tie!
 string declareWinner(string winner);
+//output params: announces winner or tie!
+
+//input param: current player, and next player
 void changeTurn(Player &cur, Player &next);
+//output param: switches current player and next player
+
+//input: card to remove, player to remove from
 Card removeCardRank(Card c, Player &p);
+//output: returns card that is removed from player's hand
+
+//input: card to check rank, player to check rank from;
 Card returnHandRank(Card c, Player p);
+//output: returns card that matches the same rank in the input players hand
 // void dealHand(Deck &d, Player &p, int numCards);
 
 
