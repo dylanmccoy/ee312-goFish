@@ -22,17 +22,168 @@
 
 using namespace std;
 
+//#define GAME_DEBUGGING
 
 // PROTOTYPES for functions used by this demonstration program:
+string declareWinner(string winner);
+void changeTurn(Player &cur, Player &next);
+Card removeCardRank(Card c, Player &p);
+Card returnHandRank(Card c, Player p);
 void dealHand(Deck &d, Player &p, int numCards);
 
 
-
-
-int main( )
-{
+int main() {
+    srand(time(NULL));
     ofstream myfile;
     myfile.open ("gofish_results.txt");
+    myfile << "Starting game of Go Fish" << endl;
+
+    Deck d;
+    Player p1("Dylan");
+    Player p2("Geof");
+    Player* currentPlayer = &p1;
+    Player* nextPlayer = &p2;
+
+    string turn = "p1";
+    Card chosenCard;
+    Card addedCard;
+
+    d.shuffle();
+    for (int i = 0; i < 7; i++) {
+        p1.addCard(d.dealCard());
+        p2.addCard(d.dealCard());
+    }
+    while ((p1.getBookSize() + p2.getBookSize()) < 26) {    // loop through turns until game ends
+        if (currentPlayer->getHandSize() == 0) {
+            myfile << currentPlayer->getName() << "'s hand is empty" << endl;
+            if(d.size() != 0) {
+                addedCard = d.dealCard();
+                currentPlayer->addCard(addedCard);
+                myfile << currentPlayer->getName() << " draws " << addedCard.toString() << endl << endl;
+            }
+            else {
+                myfile << "Deck is empty!" << endl << endl;
+            }
+            changeTurn(*currentPlayer, *nextPlayer);
+        }
+        else {
+            chosenCard = currentPlayer->chooseCardFromHand();
+            myfile << currentPlayer->getName() << " asks - Do you have a " << chosenCard.rankString(chosenCard.getRank()) << "?" << endl;
+            
+            
+            #ifdef GAME_DEBUGGING
+                myfile << nextPlayer->showHand() << endl;
+                myfile << currentPlayer->showHand() << endl;
+            #endif
+
+
+            if (nextPlayer->sameRankInHand(chosenCard)) {
+                myfile << nextPlayer->getName() << " says - Yes. I have a " << chosenCard.rankString(chosenCard.getRank()) << "." << endl;
+                addedCard = removeCardRank(chosenCard, *nextPlayer); //nextPlayer->removeCardFromHand(chosenCard);
+                currentPlayer->addCard(addedCard);
+                myfile << currentPlayer->getName() << " books " << chosenCard.toString() << " and " << addedCard.toString() << "." << endl << endl;
+            }
+            else {
+                myfile << nextPlayer->getName() << " says - Go Fish." << endl;
+                if (d.size() != 0) {
+                    addedCard = d.dealCard();
+                    if (currentPlayer->sameRankInHand(addedCard)) {
+                        Card cardToBook = returnHandRank(addedCard, *currentPlayer);
+                        myfile << currentPlayer->getName() << " draws " << addedCard.toString() << " and books with " << cardToBook.toString() << "." << endl << endl;
+                    }
+                    else {
+                        myfile << currentPlayer->getName() << " draws " << addedCard.toString() << endl << endl;
+                    }
+                    currentPlayer->addCard(addedCard);
+                }
+                else {
+                    myfile << "Deck is empty!" << endl << endl;
+                }
+                changeTurn(*currentPlayer, *nextPlayer);
+            }
+        }
+    }
+
+    myfile << p1.getName() <<  " has " << p1.getBookSize() << " books." << endl;
+    myfile << p2.getName() <<  " has " << p2.getBookSize() << " books." << endl;
+
+    #ifdef GAME_DEBUGGING
+        myfile << "deck has " << d.size() << " cards left." << endl;
+        myfile << p1.getName() <<  " hand is " << p1.showHand() << "." << endl;
+        myfile << p2.getName() <<  " hand is " << p2.showHand() << "." << endl;
+        myfile << p1.getName() <<  " book is " << p1.showBooks() << "." << endl;
+        myfile << p2.getName() <<  " book is " << p2.showBooks() << "." << endl;
+    #endif
+
+    if (p1.getBookSize() > p2.getBookSize()) {
+        myfile << declareWinner(p1.getName()) << endl;
+    }
+    else if (p1.getBookSize() == p2.getBookSize()) {
+        myfile << declareWinner("tie") << endl;
+    }
+    else {
+        myfile << declareWinner(p2.getName()) << endl;
+    }
+}
+
+string declareWinner(string winner) {
+    string str = "";
+    if (winner == "tie") {
+        str += "There is a tie!";
+    }
+    else {
+        str += winner + " is the winner!";
+    }
+    return str;
+}
+
+// assumes p has a card with same rank as c
+Card removeCardRank(Card c, Player &p) {
+    int rank = c.getRank();
+    Card card;
+    if (p.cardInHand(Card(rank, Card::spades))) {
+        card = p.removeCardFromHand(Card(rank, Card::spades));
+    }
+    else if (p.cardInHand(Card(rank, Card::hearts))) {
+        card = p.removeCardFromHand(Card(rank, Card::hearts));
+    }
+    else if (p.cardInHand(Card(rank, Card::diamonds))) {
+        card = p.removeCardFromHand(Card(rank, Card::diamonds));
+    }
+    else if (p.cardInHand(Card(rank, Card::clubs))) {
+        card = p.removeCardFromHand(Card(rank, Card::clubs));
+    }
+    return card;
+}
+
+Card returnHandRank(Card c, Player p){
+    int rank = c.getRank();
+    Card card;
+    if (p.cardInHand(Card(rank, Card::spades))) {
+        card = Card(rank, Card::spades);
+    }
+    else if (p.cardInHand(Card(rank, Card::hearts))) {
+        card = Card(rank, Card::hearts);
+    }
+    else if (p.cardInHand(Card(rank, Card::diamonds))) {
+        card = Card(rank, Card::diamonds);
+    }
+    else if (p.cardInHand(Card(rank, Card::clubs))) {
+        card = Card(rank, Card::clubs);
+    }
+    return card;
+}
+
+void changeTurn(Player &cur, Player &next) {
+    Player temp = cur;
+    cur = next;
+    next = temp;
+}
+
+int main1()
+{
+    ofstream myfile;
+    myfile.open ("gofish_test.txt");
     myfile << "Writing this to a file.\n";
 
     myfile << "Testing card.h" << endl;
@@ -198,30 +349,16 @@ int main( )
         myfile << "error: cardInHand" << endl;
     }
 
-    // myfile << "p2 hand size is:" << p2.getHandSize() << endl;
-    // myfile << "p2 book size is:" << p2.getBookSize() << endl;
-    // myfile << "p3 hand size is:" << p3.getHandSize() << endl;
-    // myfile << "p3 book size is:" << p3.getBookSize() << endl;
+    myfile << "p2 hand size is:" << p2.getHandSize() << endl;
+    myfile << "p2 book size is:" << p2.getBookSize() << endl;
+    myfile << "p3 hand size is:" << p3.getHandSize() << endl;
+    myfile << "p3 book size is:" << p3.getBookSize() << endl;
 
 
 
 
 
-   /* int numCards = 5;
-    Player p1("Joe");
-    Player p2("Jane");
 
-    //Deck d;  //create a deck of cards
-    d.shuffle();
-
-    dealHand(d, p1, numCards);
-    dealHand(d, p2, numCards);
-
-    cout << p1.getName() <<" has : " << p1.showHand() << endl;
-    cout << p2.getName() <<" has : " << p2.showHand() << endl;
-
-
-    myfile.close();*/
     return EXIT_SUCCESS;  
 }
 

@@ -46,12 +46,12 @@ bool Player::checkHandForBook(Card &c1, Card &c2) {
     return false;
 }
 
-//OPTIONAL
-// comment out if you decide to not use it    
-//Does the player have a card with the same rank as c in her hand?
-bool Player::rankInHand(Card c) const {
+// //OPTIONAL
+// // comment out if you decide to not use it    
+// //Does the player have a card with the same rank as c in her hand?
+// bool Player::rankInHand(Card c) const {
 
-}
+// }
 
 //uses some strategy to choose one card from the player's
 //hand so they can say "Do you have a 4?"
@@ -67,10 +67,8 @@ bool Player::cardInHand(Card c) const {
         if (*iter == c) {
             return true;
         }
-        else {
-            return false;
-        }
     }
+    return false;
 }
 
 //Remove the card c from the hand and return it to the caller
@@ -80,7 +78,7 @@ Card Player::removeCardFromHand(Card c) {
         if (*iter == c) {
             card = c;
             myHand.erase(iter);
-            break;
+            return card;
         }
     }
     return card;
@@ -127,15 +125,13 @@ string Player::showBooks() const {
 //e.g. will return true if the player has a 7d and the parameter is 7c
 
 bool Player::sameRankInHand(Card c) const {
-    
+    for( auto iter = myHand.begin(); iter != myHand.end(); iter++) {
+        if (iter->getRank() == c.getRank()) {
+            return true;
+        }
+    }
+    return false;
 }
 
 
-int Player::getHandSize() const{
-
-}
-
-int Player::getBookSize() const{
-
-}
 

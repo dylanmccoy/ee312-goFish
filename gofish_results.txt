@@ -1,178 +1,217 @@
-Writing this to a file.
-Testing card.h
-c is:As
-c1 is:As
-Testing '==' operator
-success
-Testing '!=' operator
-success
-testing deck.h
-testing deck constructors and deal card
-________________________________________
-As
-2s
-3s
-4s
-5s
-6s
-7s
-8s
-9s
-10s
-Js
-Qs
-Ks
-Ah
-2h
-3h
-4h
-5h
-6h
-7h
-8h
-9h
-10h
-Jh
-Qh
-Kh
-Ad
-2d
-3d
-4d
-5d
-6d
-7d
-8d
-9d
-10d
-Jd
-Qd
-Kd
-Ac
-2c
-3c
-4c
-5c
-6c
-7c
-8c
-9c
-10c
-Jc
-Qc
-Kc
-As
-testing shuffle with full deck
-________________________________________
-size is:52
-9c
-As
-6h
-6s
-3s
-7c
-Kd
-8h
-9h
-5d
-5h
-5c
-Ad
-4s
-7d
-Kc
-10c
-Qd
-8c
-Qh
-4h
-5s
-10s
-3d
-4c
-Jd
-Js
-10d
-4d
-7h
-8d
-7s
-3h
-Qs
-2d
-6d
-Jc
-3c
-Jh
-Qc
-9s
-6c
-Ah
-8s
-10h
-9d
-Kh
-Ac
-2s
-Ks
-2h
-2c
-size is:0
-testing shuffle within a deck
-________________________________________
-size is:27
-Js
-Jc
-9h
-7h
-Kh
-6h
-3d
-Ks
-3h
-8h
-As
-Kd
-10d
-7c
-Ad
-Qc
-10c
-2s
-6c
-9d
-Qh
-9s
-5d
-9c
-7d
-5c
-Jh
-testing one player functions
-________________________________________
-[As]
-[]
-[]
-{[As, Ah]}
-testing two players asking for cards -- swap success
-________________________________________
-size of deck is: 52
-p2 hand is: [As, 2s, 3s, 4s, 5s, 6s, 7s]
-p2 book is: {}
-p3 hand is: [8s, 9s, 10s, Js, Qs, Ks, Ah]
-p3 book is: {}
-testing chooseCardFromHand()
-________________________________________
-card: 0 for p2 chose is:2s
-card: 1 for p2 chose is:6s
-card: 2 for p2 chose is:As
-card: 0 for p3 chose is:Ah
-card: 1 for p3 chose is:Js
-card: 2 for p3 chose is:8s
-10 of spades not in p2 hand
-p3 asks p2 for Ace of spades
-p2 hand:[As, 2s, 3s, 4s, 5s, 6s, 7s]
-p3 hand:[8s, 9s, 10s, Js, Qs, Ks, Ah]
-Ace of spades in p2 hand
-p3 should have a book now:
-{[Ah, As]}
+Starting game of Go Fish
+Dylan asks - Do you have a 3?
+Geof says - Yes. I have a 3.
+Dylan books 3c and 3h.
+
+Dylan asks - Do you have a 6?
+Geof says - Go Fish.
+Dylan draws 3d
+
+Geof asks - Do you have a A?
+Dylan says - Go Fish.
+Geof draws 6h
+
+Dylan asks - Do you have a 9?
+Geof says - Go Fish.
+Dylan draws As
+
+Geof asks - Do you have a 6?
+Dylan says - Yes. I have a 6.
+Geof books 6h and 6d.
+
+Geof asks - Do you have a Q?
+Dylan says - Go Fish.
+Geof draws Ks
+
+Dylan asks - Do you have a 9?
+Geof says - Go Fish.
+Dylan draws 6s
+
+Geof asks - Do you have a Q?
+Dylan says - Go Fish.
+Geof draws 8h
+
+Dylan asks - Do you have a 3?
+Geof says - Go Fish.
+Dylan draws 10h
+
+Geof asks - Do you have a 2?
+Dylan says - Go Fish.
+Geof draws 10c
+
+Dylan asks - Do you have a 10?
+Geof says - Yes. I have a 10.
+Dylan books 10h and 10c.
+
+Dylan asks - Do you have a 9?
+Geof says - Go Fish.
+Dylan draws 8c
+
+Geof asks - Do you have a 7?
+Dylan says - Go Fish.
+Geof draws 9d
+
+Dylan asks - Do you have a 3?
+Geof says - Go Fish.
+Dylan draws 5d
+
+Geof asks - Do you have a Q?
+Dylan says - Go Fish.
+Geof draws Kd and books with Ks.
+
+Dylan asks - Do you have a 6?
+Geof says - Go Fish.
+Dylan draws 5c and books with 5d.
+
+Geof asks - Do you have a 8?
+Dylan says - Yes. I have a 8.
+Geof books 8h and 8c.
+
+Geof asks - Do you have a Q?
+Dylan says - Go Fish.
+Geof draws 10s
+
+Dylan asks - Do you have a 9?
+Geof says - Yes. I have a 9.
+Dylan books 9s and 9d.
+
+Dylan asks - Do you have a 6?
+Geof says - Go Fish.
+Dylan draws Jd
+
+Geof asks - Do you have a Q?
+Dylan says - Go Fish.
+Geof draws 6c
+
+Dylan asks - Do you have a 6?
+Geof says - Yes. I have a 6.
+Dylan books 6s and 6c.
+
+Dylan asks - Do you have a 3?
+Geof says - Go Fish.
+Dylan draws 7c
+
+Geof asks - Do you have a 7?
+Dylan says - Yes. I have a 7.
+Geof books 7d and 7c.
+
+Geof asks - Do you have a Q?
+Dylan says - Go Fish.
+Geof draws 7h
+
+Dylan asks - Do you have a J?
+Geof says - Go Fish.
+Dylan draws Js and books with Jd.
+
+Geof asks - Do you have a 10?
+Dylan says - Go Fish.
+Geof draws Qc and books with Qs.
+
+Dylan asks - Do you have a 3?
+Geof says - Go Fish.
+Dylan draws 2c
+
+Geof asks - Do you have a A?
+Dylan says - Yes. I have a A.
+Geof books Ac and As.
+
+Geof asks - Do you have a 2?
+Dylan says - Yes. I have a 2.
+Geof books 2s and 2c.
+
+Geof asks - Do you have a 10?
+Dylan says - Go Fish.
+Geof draws 3s
+
+Dylan asks - Do you have a 3?
+Geof says - Yes. I have a 3.
+Dylan books 3d and 3s.
+
+Dylan's hand is empty
+Dylan draws 9c
+
+Geof asks - Do you have a 7?
+Dylan says - Go Fish.
+Geof draws Jc
+
+Dylan asks - Do you have a 9?
+Geof says - Go Fish.
+Dylan draws 4s
+
+Geof asks - Do you have a 7?
+Dylan says - Go Fish.
+Geof draws Qh
+
+Dylan asks - Do you have a 4?
+Geof says - Go Fish.
+Dylan draws 2h
+
+Geof asks - Do you have a 10?
+Dylan says - Go Fish.
+Geof draws Jh and books with Jc.
+
+Dylan asks - Do you have a 2?
+Geof says - Go Fish.
+Dylan draws 10d
+
+Geof asks - Do you have a 7?
+Dylan says - Go Fish.
+Geof draws 4h
+
+Dylan asks - Do you have a 4?
+Geof says - Yes. I have a 4.
+Dylan books 4s and 4h.
+
+Dylan asks - Do you have a 10?
+Geof says - Yes. I have a 10.
+Dylan books 10d and 10s.
+
+Dylan asks - Do you have a 9?
+Geof says - Go Fish.
+Dylan draws 7s
+
+Geof asks - Do you have a Q?
+Dylan says - Go Fish.
+Geof draws 9h
+
+Dylan asks - Do you have a 7?
+Geof says - Yes. I have a 7.
+Dylan books 7s and 7h.
+
+Dylan asks - Do you have a 2?
+Geof says - Go Fish.
+Dylan draws Qd
+
+Geof asks - Do you have a 9?
+Dylan says - Yes. I have a 9.
+Geof books 9h and 9c.
+
+Geof asks - Do you have a Q?
+Dylan says - Yes. I have a Q.
+Geof books Qh and Qd.
+
+Geof's hand is empty
+Geof draws 8s
+
+Dylan asks - Do you have a 2?
+Geof says - Go Fish.
+Dylan draws 2d and books with 2h.
+
+Geof asks - Do you have a 8?
+Dylan says - Go Fish.
+Geof draws Kh
+
+Dylan's hand is empty
+Dylan draws Kc
+
+Geof asks - Do you have a K?
+Dylan says - Yes. I have a K.
+Geof books Kh and Kc.
+
+Geof asks - Do you have a 8?
+Dylan says - Go Fish.
+Geof draws 8d and books with 8s.
+
+Dylan has 13 books.
+Geof has 13 books.
+There is a tie!

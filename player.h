@@ -40,10 +40,10 @@ class Player
 
     bool checkHandForBook(Card &c1, Card &c2);
 
-    //OPTIONAL
-    // comment out if you decide to not use it    
-    //Does the player have a card with the same rank as c in her hand?
-    bool rankInHand(Card c) const; 
+    // //OPTIONAL
+    // // comment out if you decide to not use it    
+    // //Does the player have a card with the same rank as c in her hand?
+    // bool rankInHand(Card c) const; 
     
     //uses some strategy to choose one card from the player's
     //hand so they can say "Do you have a 4?"
@@ -58,8 +58,8 @@ class Player
     string showHand() const; 
     string showBooks() const; 
     
-    int getHandSize() const; 
-    int getBookSize() const; 
+    int getHandSize() const { return myHand.size();} 
+    int getBookSize() const { return myBook.size() / 2;}
        
 //    //OPTIONAL
 //    // comment out if you decide to not use it
