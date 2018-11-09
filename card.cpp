@@ -1,41 +1,75 @@
 #include <iostream>
 #include <string>
+
 #include "card.h"
 
 using namespace std;
 
 
 Card::Card() {
-    this->mySuit = spades;
-    this->myRank = 1;
+    myRank = 1;
+    mySuit = spades;
 }          
 
 Card::Card(int rank, Suit s) {
-    mySuit = s;
     myRank = rank;
+    mySuit = s;
 }
 
 bool Card::sameSuitAs(const Card& c) const {
-
+    return this->mySuit == c.mySuit;
 }
 
-
-
-
 string Card::suitString(Suit s) const {
-    string str = "S";
-    return str;
+    if (s == spades) {
+        return "s";
+    }
+    else if (s == hearts) {
+        return "h";
+    }
+    else if (s == diamonds) {
+        return "d";
+    }
+    else {
+        return "c";
+    }
 }
 
 string Card::rankString(int r) const {
-    string str = "A";
-    return str;
+    if (r == 1) {
+        return "A";
+    }
+    else if (r == 11) {
+        return "J";
+    }
+    else if (r == 12) {
+        return "Q";
+    }
+    else if (r == 13) {
+        return "K";
+    }
+    else {
+        return to_string(r);
+    }
 }
 
 
 bool Card::operator == (const Card& rhs) const {
-
+    if (this->mySuit == rhs.mySuit) {
+        if (this->myRank == rhs.myRank) {
+            return true;
+        }
+    }
+    return false;
 }
 bool Card::operator != (const Card& rhs) const {
+    if ((this->mySuit != rhs.mySuit) || (this->myRank != rhs.myRank)) {
+        return true;
+    }
+    return false;
+}
 
+ostream& operator << (ostream& out, const Card& c) {
+    out << c.toString();
+    return out;
 }
