@@ -29,7 +29,7 @@ string declareWinner(string winner);
 void changeTurn(Player &cur, Player &next);
 Card removeCardRank(Card c, Player &p);
 Card returnHandRank(Card c, Player p);
-void dealHand(Deck &d, Player &p, int numCards);
+// void dealHand(Deck &d, Player &p, int numCards);
 
 
 int main() {
@@ -180,195 +180,195 @@ void changeTurn(Player &cur, Player &next) {
     next = temp;
 }
 
-int main1()
-{
-    ofstream myfile;
-    myfile.open ("gofish_test.txt");
-    myfile << "Writing this to a file.\n";
+// int main1()
+// {
+//     ofstream myfile;
+//     myfile.open ("gofish_test.txt");
+//     myfile << "Writing this to a file.\n";
 
-    myfile << "Testing card.h" << endl;
-    Card c;
+//     myfile << "Testing card.h" << endl;
+//     Card c;
 
-    myfile << "c is:" << c.toString() << endl;
+//     myfile << "c is:" << c.toString() << endl;
 
-    Card c1(3, Card::hearts);
-    Card c2;
+//     Card c1(3, Card::hearts);
+//     Card c2;
 
-    myfile << "c1 is:" << c.toString() << endl;
+//     myfile << "c1 is:" << c.toString() << endl;
 
-    myfile << "Testing '==' operator" << endl;
-    if(c1 == c2){
-        myfile << "error"<< endl;
-    }else{
-        myfile << "success" << endl;
-    }
-    myfile << "Testing '!=' operator" << endl;
-    if(c1 != c2) {
-        myfile << "success" << endl;
-    } 
-    else {
-        myfile << "error" << endl;
-    }
-
-    
-    myfile << "testing deck.h" << endl;
-
-    myfile << "testing deck constructors and deal card" << endl;
-    myfile << "________________________________________" << endl;
-
-    Deck d;
-    Card* temp = new Card;
-
-    for(int i = 0; i < 53; i++){
-        *temp = d.dealCard();
-        myfile << temp->toString() << endl;
-    }
-
-
-    myfile << "testing shuffle with full deck" << endl;
-    myfile << "________________________________________" << endl;
-
-    Deck d1;
-
-    d1.shuffle();
-
-    myfile << "size is:" << d1.size() << endl;
-    for(int i = 0; i < 52; i++){
-        *temp = d1.dealCard();
-        myfile << temp->toString() << endl;
-    }
-    myfile << "size is:" << d1.size() << endl;  //expect 0
-
-    myfile << "testing shuffle within a deck" << endl;
-    myfile << "________________________________________" << endl;
-
-
-    Deck d2;
-
-    for(int i = 0; i < 25; i++){
-        *temp = d2.dealCard();
-        //myfile << temp->toString() << endl;
-    }
-
-    d2.shuffle();
-
-    int size = d2.size();
-    myfile << "size is:" << size << endl;
-
-    for(int i = 0; i < size; i++){
-        *temp = d2.dealCard();
-        myfile << temp->toString() << endl;
-    }
+//     myfile << "Testing '==' operator" << endl;
+//     if(c1 == c2){
+//         myfile << "error"<< endl;
+//     }else{
+//         myfile << "success" << endl;
+//     }
+//     myfile << "Testing '!=' operator" << endl;
+//     if(c1 != c2) {
+//         myfile << "success" << endl;
+//     } 
+//     else {
+//         myfile << "error" << endl;
+//     }
 
     
-    myfile << "testing one player functions" << endl;
-    myfile << "________________________________________" << endl;
+//     myfile << "testing deck.h" << endl;
+
+//     myfile << "testing deck constructors and deal card" << endl;
+//     myfile << "________________________________________" << endl;
+
+//     Deck d;
+//     Card* temp = new Card;
+
+//     for(int i = 0; i < 53; i++){
+//         *temp = d.dealCard();
+//         myfile << temp->toString() << endl;
+//     }
 
 
-    Player p1("Joe");
+//     myfile << "testing shuffle with full deck" << endl;
+//     myfile << "________________________________________" << endl;
+
+//     Deck d1;
+
+//     d1.shuffle();
+
+//     myfile << "size is:" << d1.size() << endl;
+//     for(int i = 0; i < 52; i++){
+//         *temp = d1.dealCard();
+//         myfile << temp->toString() << endl;
+//     }
+//     myfile << "size is:" << d1.size() << endl;  //expect 0
+
+//     myfile << "testing shuffle within a deck" << endl;
+//     myfile << "________________________________________" << endl;
 
 
-    Deck deck;
+//     Deck d2;
+
+//     for(int i = 0; i < 25; i++){
+//         *temp = d2.dealCard();
+//         //myfile << temp->toString() << endl;
+//     }
+
+//     d2.shuffle();
+
+//     int size = d2.size();
+//     myfile << "size is:" << size << endl;
+
+//     for(int i = 0; i < size; i++){
+//         *temp = d2.dealCard();
+//         myfile << temp->toString() << endl;
+//     }
+
+    
+//     myfile << "testing one player functions" << endl;
+//     myfile << "________________________________________" << endl;
 
 
-    p1.addCard(deck.dealCard());
-
-    myfile << p1.showHand() << endl;
-
-    p1.addCard(Card(1, Card::hearts));
-
-    myfile << p1.showHand() << endl;
-
-    // myfile << "testing checkHandForBook" << endl;
-    // Card* card1 = new Card;
-    // Card* card2 = new Card;
-
-    // if(p1.checkHandForBook(*card1, *card2)){
-    //     myfile << "found match" << endl;
-    //     p1.bookCards(*card1, *card2);
-    // }
-
-    // myfile << "card1 is:" << card1->toString() << endl;
-    // myfile << "card2 is:" << card2->toString() << endl;
-    myfile << p1.showHand() << endl;
-    myfile << p1.showBooks() << endl;
+//     Player p1("Joe");
 
 
-    myfile << "testing two players asking for cards -- swap success" << endl;
-    myfile << "________________________________________" << endl;
+//     Deck deck;
 
 
-    Player p2("Dylan");
-    Player p3("Geof");
+//     p1.addCard(deck.dealCard());
 
-    Deck deck2;
+//     myfile << p1.showHand() << endl;
 
-    myfile << "size of deck is: " << deck2.size() << endl;
+//     p1.addCard(Card(1, Card::hearts));
 
-    for(int i = 0; i < 7; i++){
-        p2.addCard(deck2.dealCard());
-    }
+//     myfile << p1.showHand() << endl;
 
-    for(int i = 0; i < 7; i++){
-        p3.addCard(deck2.dealCard());
-    }
-    myfile << "p2 hand is: " << p2.showHand() << endl;
-    myfile << "p2 book is: " << p2.showBooks() << endl;
-    myfile << "p3 hand is: " << p3.showHand() << endl;
-    myfile << "p3 book is: " << p3.showBooks() << endl;
-    myfile << "testing chooseCardFromHand()" << endl;
-    myfile << "________________________________________" << endl;
+//     // myfile << "testing checkHandForBook" << endl;
+//     // Card* card1 = new Card;
+//     // Card* card2 = new Card;
 
-    for(int i = 0; i < 3; i++){
-        *temp = p2.chooseCardFromHand();
-        myfile << "card: " << i <<" for p2 chose is:"<< temp->toString() << endl;
-    }
+//     // if(p1.checkHandForBook(*card1, *card2)){
+//     //     myfile << "found match" << endl;
+//     //     p1.bookCards(*card1, *card2);
+//     // }
 
-    for(int i = 0; i < 3; i++){
-        *temp = p3.chooseCardFromHand();
-        myfile << "card: " << i << " for p3 chose is:"<< temp->toString() << endl;
-    }
-
-    if (p2.cardInHand(Card(10, Card::spades))) {
-        myfile << "error: cardInHand" << endl;
-    }
-    else {
-        myfile << "10 of spades not in p2 hand" << endl;
-    }
-
-    myfile << "p3 asks p2 for Ace of spades" << endl;
-    if (p2.cardInHand(Card(1, Card::spades))) {
-        myfile << "p2 hand:" << p2.showHand() << endl;
-        myfile << "p3 hand:" << p3.showHand() << endl;
-        myfile << "Ace of spades in p2 hand" << endl;
-        p3.addCard(p2.removeCardFromHand(Card(1, Card::spades)));
-        myfile << "p3 should have a book now:" << endl;
-        myfile << p3.showBooks() << endl;
-    }
-    else {
-        myfile << "error: cardInHand" << endl;
-    }
-
-    myfile << "p2 hand size is:" << p2.getHandSize() << endl;
-    myfile << "p2 book size is:" << p2.getBookSize() << endl;
-    myfile << "p3 hand size is:" << p3.getHandSize() << endl;
-    myfile << "p3 book size is:" << p3.getBookSize() << endl;
+//     // myfile << "card1 is:" << card1->toString() << endl;
+//     // myfile << "card2 is:" << card2->toString() << endl;
+//     myfile << p1.showHand() << endl;
+//     myfile << p1.showBooks() << endl;
 
 
+//     myfile << "testing two players asking for cards -- swap success" << endl;
+//     myfile << "________________________________________" << endl;
 
 
+//     Player p2("Dylan");
+//     Player p3("Geof");
 
+//     Deck deck2;
 
-    return EXIT_SUCCESS;  
-}
+//     myfile << "size of deck is: " << deck2.size() << endl;
+
+//     for(int i = 0; i < 7; i++){
+//         p2.addCard(deck2.dealCard());
+//     }
+
+//     for(int i = 0; i < 7; i++){
+//         p3.addCard(deck2.dealCard());
+//     }
+//     myfile << "p2 hand is: " << p2.showHand() << endl;
+//     myfile << "p2 book is: " << p2.showBooks() << endl;
+//     myfile << "p3 hand is: " << p3.showHand() << endl;
+//     myfile << "p3 book is: " << p3.showBooks() << endl;
+//     myfile << "testing chooseCardFromHand()" << endl;
+//     myfile << "________________________________________" << endl;
+
+//     for(int i = 0; i < 3; i++){
+//         *temp = p2.chooseCardFromHand();
+//         myfile << "card: " << i <<" for p2 chose is:"<< temp->toString() << endl;
+//     }
+
+//     for(int i = 0; i < 3; i++){
+//         *temp = p3.chooseCardFromHand();
+//         myfile << "card: " << i << " for p3 chose is:"<< temp->toString() << endl;
+//     }
+
+//     if (p2.cardInHand(Card(10, Card::spades))) {
+//         myfile << "error: cardInHand" << endl;
+//     }
+//     else {
+//         myfile << "10 of spades not in p2 hand" << endl;
+//     }
+
+//     myfile << "p3 asks p2 for Ace of spades" << endl;
+//     if (p2.cardInHand(Card(1, Card::spades))) {
+//         myfile << "p2 hand:" << p2.showHand() << endl;
+//         myfile << "p3 hand:" << p3.showHand() << endl;
+//         myfile << "Ace of spades in p2 hand" << endl;
+//         p3.addCard(p2.removeCardFromHand(Card(1, Card::spades)));
+//         myfile << "p3 should have a book now:" << endl;
+//         myfile << p3.showBooks() << endl;
+//     }
+//     else {
+//         myfile << "error: cardInHand" << endl;
+//     }
+
+//     myfile << "p2 hand size is:" << p2.getHandSize() << endl;
+//     myfile << "p2 book size is:" << p2.getBookSize() << endl;
+//     myfile << "p3 hand size is:" << p3.getHandSize() << endl;
+//     myfile << "p3 book size is:" << p3.getBookSize() << endl;
 
 
 
-void dealHand(Deck &d, Player &p, int numCards)
-{
-   for (int i=0; i < numCards; i++)
-      p.addCard(d.dealCard());
-}
+
+
+
+//     return EXIT_SUCCESS;  
+// }
+
+
+
+// void dealHand(Deck &d, Player &p, int numCards)
+// {
+//    for (int i=0; i < numCards; i++)
+//       p.addCard(d.dealCard());
+// }
    
 
 
