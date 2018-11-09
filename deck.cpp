@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Deck::Deck() {
+Deck::Deck() {                                      //creates a deck that starts with Ace of spades, 2 of spades, ..., A of hearts, 2 of hearts... etc. in that order
     myIndex = 0;
     Card temp;
     for (int i = 0; i < 13; i++) {

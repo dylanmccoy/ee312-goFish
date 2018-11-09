@@ -13,6 +13,7 @@
 // }
 // FILE: card_demo.cpp
 // This is a small demonstration program showing how the Card and Deck classes are used.
+
 #include <iostream>    // Provides cout and cin
 #include <cstdlib>     // Provides EXIT_SUCCESS
 #include <fstream>
@@ -49,13 +50,15 @@ int main() {
     Card addedCard;
 
     d.shuffle();
+
     for (int i = 0; i < 7; i++) {
         p1.addCard(d.dealCard());
         p2.addCard(d.dealCard());
     }
+
     while ((p1.getBookSize() + p2.getBookSize()) < 26) {    // loop through turns until game ends
         if (currentPlayer->getHandSize() == 0) {
-            myfile << currentPlayer->getName() << "'s hand is empty" << endl;
+            myfile << currentPlayer->getName() << "'s hand is empty" << endl;                               //draw a card if hand is empty, end turn
             if(d.size() != 0) {
                 addedCard = d.dealCard();
                 currentPlayer->addCard(addedCard);
@@ -79,7 +82,7 @@ int main() {
 
             if (nextPlayer->sameRankInHand(chosenCard)) {
                 myfile << nextPlayer->getName() << " says - Yes. I have a " << chosenCard.rankString(chosenCard.getRank()) << "." << endl;
-                addedCard = removeCardRank(chosenCard, *nextPlayer); //nextPlayer->removeCardFromHand(chosenCard);
+                addedCard = removeCardRank(chosenCard, *nextPlayer); //removes chosen card from one players hand and returns it to asking players hand
                 currentPlayer->addCard(addedCard);
                 myfile << currentPlayer->getName() << " books " << chosenCard.toString() << " and " << addedCard.toString() << "." << endl << endl;
             }
@@ -88,7 +91,7 @@ int main() {
                 if (d.size() != 0) {
                     addedCard = d.dealCard();
                     if (currentPlayer->sameRankInHand(addedCard)) {
-                        Card cardToBook = returnHandRank(addedCard, *currentPlayer);
+                        Card cardToBook = returnHandRank(addedCard, *currentPlayer);    //checks to see if they draw a card that needs to be booked at every GoFish
                         myfile << currentPlayer->getName() << " draws " << addedCard.toString() << " and books with " << cardToBook.toString() << "." << endl << endl;
                     }
                     else {
@@ -138,8 +141,8 @@ string declareWinner(string winner) {
 }
 
 // assumes p has a card with same rank as c
-Card removeCardRank(Card c, Player &p) {
-    int rank = c.getRank();
+Card removeCardRank(Card c, Player &p) {                        //removes the card that matches the rank of the chosen card from the asked persons hand
+    int rank = c.getRank();                                     //this is for when players ask other players successfully
     Card card;
     if (p.cardInHand(Card(rank, Card::spades))) {
         card = p.removeCardFromHand(Card(rank, Card::spades));
@@ -156,8 +159,8 @@ Card removeCardRank(Card c, Player &p) {
     return card;
 }
 
-Card returnHandRank(Card c, Player p){
-    int rank = c.getRank();
+Card returnHandRank(Card c, Player p){                          //returns the card that matches the rank of the chosen card from the asked players hand
+    int rank = c.getRank();                                     //this is for booking cards from GoFishing
     Card card;
     if (p.cardInHand(Card(rank, Card::spades))) {
         card = Card(rank, Card::spades);
