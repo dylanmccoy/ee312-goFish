@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include <sstream>
 #include "card.h"
 
 using namespace std;
@@ -49,7 +49,11 @@ string Card::rankString(int r) const {
         return "K";
     }
     else {
-        return to_string(r);
+        string out_string;
+        stringstream ss;
+        ss << r;
+        out_string = ss.str();
+        return out_string;
     }
 }
 

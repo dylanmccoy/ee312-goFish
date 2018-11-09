@@ -2,7 +2,7 @@
 # Makefile created by Dev-C++ 4.9.9.2
 # Modified by jwebb
 
-CPP  = g++
+CPP  = g++ -std=c++0x
 RES  = 
 OBJ  = card.o deck.o go_fish.o player.o $(RES)
 LINKOBJ  = card.o deck.o go_fish.o player.o $(RES)
