@@ -1,217 +1,200 @@
 Starting game of Go Fish
-Dylan asks - Do you have a 3?
-Geof says - Yes. I have a 3.
-Dylan books 3c and 3h.
-
-Dylan asks - Do you have a 6?
+Dylan asks - Do you have a A?
 Geof says - Go Fish.
-Dylan draws 3d
-
-Geof asks - Do you have a A?
-Dylan says - Go Fish.
-Geof draws 6h
-
-Dylan asks - Do you have a 9?
-Geof says - Go Fish.
-Dylan draws As
-
-Geof asks - Do you have a 6?
-Dylan says - Yes. I have a 6.
-Geof books 6h and 6d.
+Dylan draws 10s
 
 Geof asks - Do you have a Q?
 Dylan says - Go Fish.
-Geof draws Ks
-
-Dylan asks - Do you have a 9?
-Geof says - Go Fish.
-Dylan draws 6s
-
-Geof asks - Do you have a Q?
-Dylan says - Go Fish.
-Geof draws 8h
-
-Dylan asks - Do you have a 3?
-Geof says - Go Fish.
-Dylan draws 10h
-
-Geof asks - Do you have a 2?
-Dylan says - Go Fish.
-Geof draws 10c
+Geof draws 4h and books with 4d.
 
 Dylan asks - Do you have a 10?
-Geof says - Yes. I have a 10.
-Dylan books 10h and 10c.
-
-Dylan asks - Do you have a 9?
 Geof says - Go Fish.
-Dylan draws 8c
-
-Geof asks - Do you have a 7?
-Dylan says - Go Fish.
-Geof draws 9d
-
-Dylan asks - Do you have a 3?
-Geof says - Go Fish.
-Dylan draws 5d
-
-Geof asks - Do you have a Q?
-Dylan says - Go Fish.
-Geof draws Kd and books with Ks.
-
-Dylan asks - Do you have a 6?
-Geof says - Go Fish.
-Dylan draws 5c and books with 5d.
-
-Geof asks - Do you have a 8?
-Dylan says - Yes. I have a 8.
-Geof books 8h and 8c.
-
-Geof asks - Do you have a Q?
-Dylan says - Go Fish.
-Geof draws 10s
-
-Dylan asks - Do you have a 9?
-Geof says - Yes. I have a 9.
-Dylan books 9s and 9d.
-
-Dylan asks - Do you have a 6?
-Geof says - Go Fish.
-Dylan draws Jd
-
-Geof asks - Do you have a Q?
-Dylan says - Go Fish.
-Geof draws 6c
-
-Dylan asks - Do you have a 6?
-Geof says - Yes. I have a 6.
-Dylan books 6s and 6c.
-
-Dylan asks - Do you have a 3?
-Geof says - Go Fish.
-Dylan draws 7c
-
-Geof asks - Do you have a 7?
-Dylan says - Yes. I have a 7.
-Geof books 7d and 7c.
-
-Geof asks - Do you have a Q?
-Dylan says - Go Fish.
-Geof draws 7h
-
-Dylan asks - Do you have a J?
-Geof says - Go Fish.
-Dylan draws Js and books with Jd.
-
-Geof asks - Do you have a 10?
-Dylan says - Go Fish.
-Geof draws Qc and books with Qs.
-
-Dylan asks - Do you have a 3?
-Geof says - Go Fish.
-Dylan draws 2c
-
-Geof asks - Do you have a A?
-Dylan says - Yes. I have a A.
-Geof books Ac and As.
-
-Geof asks - Do you have a 2?
-Dylan says - Yes. I have a 2.
-Geof books 2s and 2c.
-
-Geof asks - Do you have a 10?
-Dylan says - Go Fish.
-Geof draws 3s
-
-Dylan asks - Do you have a 3?
-Geof says - Yes. I have a 3.
-Dylan books 3d and 3s.
-
-Dylan's hand is empty
-Dylan draws 9c
-
-Geof asks - Do you have a 7?
-Dylan says - Go Fish.
-Geof draws Jc
-
-Dylan asks - Do you have a 9?
-Geof says - Go Fish.
-Dylan draws 4s
-
-Geof asks - Do you have a 7?
-Dylan says - Go Fish.
-Geof draws Qh
-
-Dylan asks - Do you have a 4?
-Geof says - Go Fish.
-Dylan draws 2h
-
-Geof asks - Do you have a 10?
-Dylan says - Go Fish.
-Geof draws Jh and books with Jc.
-
-Dylan asks - Do you have a 2?
-Geof says - Go Fish.
-Dylan draws 10d
-
-Geof asks - Do you have a 7?
-Dylan says - Go Fish.
-Geof draws 4h
-
-Dylan asks - Do you have a 4?
-Geof says - Yes. I have a 4.
-Dylan books 4s and 4h.
-
-Dylan asks - Do you have a 10?
-Geof says - Yes. I have a 10.
-Dylan books 10d and 10s.
-
-Dylan asks - Do you have a 9?
-Geof says - Go Fish.
-Dylan draws 7s
-
-Geof asks - Do you have a Q?
-Dylan says - Go Fish.
-Geof draws 9h
-
-Dylan asks - Do you have a 7?
-Geof says - Yes. I have a 7.
-Dylan books 7s and 7h.
-
-Dylan asks - Do you have a 2?
-Geof says - Go Fish.
-Dylan draws Qd
+Dylan draws 5s and books with 5d.
 
 Geof asks - Do you have a 9?
 Dylan says - Yes. I have a 9.
-Geof books 9h and 9c.
+Geof books 9c and 9h.
 
 Geof asks - Do you have a Q?
-Dylan says - Yes. I have a Q.
-Geof books Qh and Qd.
-
-Geof's hand is empty
-Geof draws 8s
-
-Dylan asks - Do you have a 2?
-Geof says - Go Fish.
-Dylan draws 2d and books with 2h.
-
-Geof asks - Do you have a 8?
 Dylan says - Go Fish.
-Geof draws Kh
+Geof draws 4c
 
-Dylan's hand is empty
-Dylan draws Kc
+Dylan asks - Do you have a A?
+Geof says - Go Fish.
+Dylan draws Kh
 
 Geof asks - Do you have a K?
 Dylan says - Yes. I have a K.
-Geof books Kh and Kc.
+Geof books Kc and Kh.
+
+Geof asks - Do you have a 5?
+Dylan says - Go Fish.
+Geof draws 7d
+
+Dylan asks - Do you have a 2?
+Geof says - Go Fish.
+Dylan draws 6d and books with 6s.
+
+Geof asks - Do you have a 4?
+Dylan says - Go Fish.
+Geof draws 2h
+
+Dylan asks - Do you have a A?
+Geof says - Go Fish.
+Dylan draws Qh
+
+Geof asks - Do you have a 4?
+Dylan says - Go Fish.
+Geof draws 3s
+
+Dylan asks - Do you have a 10?
+Geof says - Go Fish.
+Dylan draws Js
+
+Geof asks - Do you have a 2?
+Dylan says - Yes. I have a 2.
+Geof books 2h and 2s.
+
+Geof asks - Do you have a 4?
+Dylan says - Go Fish.
+Geof draws 6h
+
+Dylan asks - Do you have a 10?
+Geof says - Go Fish.
+Dylan draws 10c and books with 10s.
+
+Geof asks - Do you have a 3?
+Dylan says - Yes. I have a 3.
+Geof books 3s and 3c.
+
+Geof asks - Do you have a Q?
+Dylan says - Yes. I have a Q.
+Geof books Qc and Qh.
+
+Geof asks - Do you have a 4?
+Dylan says - Go Fish.
+Geof draws Ks
+
+Dylan asks - Do you have a J?
+Geof says - Go Fish.
+Dylan draws 9d
+
+Geof asks - Do you have a 6?
+Dylan says - Go Fish.
+Geof draws Kd and books with Ks.
+
+Dylan asks - Do you have a 9?
+Geof says - Go Fish.
+Dylan draws Ah and books with As.
+
+Geof asks - Do you have a 5?
+Dylan says - Go Fish.
+Geof draws Qd
+
+Dylan asks - Do you have a 8?
+Geof says - Go Fish.
+Dylan draws Ad
+
+Geof asks - Do you have a 4?
+Dylan says - Go Fish.
+Geof draws 7h and books with 7d.
+
+Dylan asks - Do you have a J?
+Geof says - Go Fish.
+Dylan draws 2c
+
+Geof asks - Do you have a 4?
+Dylan says - Go Fish.
+Geof draws 9s
+
+Dylan asks - Do you have a A?
+Geof says - Go Fish.
+Dylan draws 3h
+
+Geof asks - Do you have a 9?
+Dylan says - Yes. I have a 9.
+Geof books 9s and 9d.
+
+Geof asks - Do you have a 5?
+Dylan says - Go Fish.
+Geof draws 8d
+
+Dylan asks - Do you have a 3?
+Geof says - Go Fish.
+Dylan draws 4s
+
+Geof asks - Do you have a 5?
+Dylan says - Go Fish.
+Geof draws 5h and books with 5c.
+
+Dylan asks - Do you have a 3?
+Geof says - Go Fish.
+Dylan draws 10d
+
+Geof asks - Do you have a Q?
+Dylan says - Go Fish.
+Geof draws Qs and books with Qd.
+
+Dylan asks - Do you have a A?
+Geof says - Go Fish.
+Dylan draws 6c
 
 Geof asks - Do you have a 8?
-Dylan says - Go Fish.
-Geof draws 8d and books with 8s.
+Dylan says - Yes. I have a 8.
+Geof books 8d and 8s.
 
-Dylan has 13 books.
-Geof has 13 books.
-There is a tie!
+Geof asks - Do you have a 4?
+Dylan says - Yes. I have a 4.
+Geof books 4c and 4s.
+
+Geof asks - Do you have a 6?
+Dylan says - Yes. I have a 6.
+Geof books 6h and 6c.
+
+Geof's hand is empty
+Geof draws 7c
+
+Dylan asks - Do you have a J?
+Geof says - Go Fish.
+Dylan draws 8h
+
+Geof asks - Do you have a 7?
+Dylan says - Go Fish.
+Geof draws 7s and books with 7c.
+
+Dylan asks - Do you have a 2?
+Geof says - Go Fish.
+Dylan draws Jd and books with Js.
+
+Geof's hand is empty
+Geof draws 2d
+
+Dylan asks - Do you have a 10?
+Geof says - Go Fish.
+Dylan draws 8c and books with 8h.
+
+Geof asks - Do you have a 2?
+Dylan says - Yes. I have a 2.
+Geof books 2d and 2c.
+
+Geof's hand is empty
+Geof draws 10h
+
+Dylan asks - Do you have a 10?
+Geof says - Yes. I have a 10.
+Dylan books 10d and 10h.
+
+Dylan asks - Do you have a A?
+Geof says - Go Fish.
+Dylan draws 3d and books with 3h.
+
+Geof's hand is empty
+Geof draws Ac
+
+Dylan asks - Do you have a A?
+Geof says - Yes. I have a A.
+Dylan books Ad and Ac.
+
+Dylan has 9 books.
+Geof has 17 books.
+Geof is the winner!
